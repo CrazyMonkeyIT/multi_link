@@ -20,14 +20,6 @@ LOCK TABLES `t_b_resources` WRITE;
 INSERT INTO `t_b_resources` VALUES ('1','系统管理','system','#','system_manager',NULL,NULL,0,0,1,'2018-02-08 10:15:30','2018-02-08 10:15:30');
 INSERT INTO `t_b_resources` VALUES ('2', '资源管理', 'resource', '/system/resource/list', 'system_resource', null, null, '1', '0', '1', '2018-02-08 10:14:32', '2018-02-08 10:14:35');
 INSERT INTO `t_b_resources` VALUES ('5', '用户管理', '', '/system/user/list', '', '', '3', '1', '0', '1', '2018-03-05 22:33:06', null);
-INSERT INTO `t_b_resources` VALUES ('6', '讲师管理', '#', '#', '', '', '1', '0', '0', '1', '2018-03-11 16:45:56', null);
-INSERT INTO `t_b_resources` VALUES ('7', '讲师列表', '#', '/lecturer/list', '', '', '1', '4', '0', '1', '2018-03-11 16:46:23', null);
-INSERT INTO `t_b_resources` VALUES ('8', '邀请讲师', '#', '/lecturer/invite/list', '', '', '2', '4', '0', '1', '2018-03-17 15:09:42', null);
-INSERT INTO `t_b_resources` VALUES ('9', '讲师等级', '#', '/lecturer/grade/list', '', '', '3', '4', '0', '1', '2018-03-17 15:11:04', null);
-INSERT INTO `t_b_resources` VALUES ('10', '提现审核', '#', '/lecturer/withdraw/list', '', '', '5', '4', '0', '1', '2018-03-17 18:27:57', null);
-INSERT INTO `t_b_resources` VALUES ('11', '讲师审核', '#', '/lecturer/register/list', '', '', '4', '4', '0', '1', '2018-03-17 18:28:37', null);
-INSERT INTO `t_b_resources` VALUES ('7', '直播间管理', 'room_manager', '#', '', '', '2', '0', '0', '1', '2018-04-20 17:13:39', '2018-04-20 17:14:16'),
-INSERT INTO `t_b_resources` VALUES ('9', '直播间列表', 'room_list', '/room/get/info', '', '', '1', '7', '0', '1', '2018-04-20 17:15:41', null);
 UNLOCK TABLES;
 
 
@@ -69,14 +61,3 @@ INSERT INTO `t_b_user_resource` VALUES
 UNLOCK TABLES;
 
 
-DROP TABLE IF EXISTS `t_b_up_file_record`;
-CREATE TABLE `t_b_up_file_record` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '文件记录主键',
-  `actual_file_path` varchar(255) DEFAULT NULL COMMENT '实际文件地址',
-  `http_file_path` varchar(255) DEFAULT NULL,
-  `split_files` text COMMENT 'http直接访问的地址，例如[{filepath:http://..../.jpg,isForeshow:true},{....}]',
-  `creator_id` int(255) DEFAULT NULL COMMENT '上传作者',
-  `create_time` datetime DEFAULT NULL COMMENT '上传时间',
-  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
