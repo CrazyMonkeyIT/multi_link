@@ -1,4 +1,4 @@
-package com.valueservice.djs.shiro.auth;
+package com.valueservice.dll.shiro.auth;
 
 import org.apache.shiro.authz.Permission;
 

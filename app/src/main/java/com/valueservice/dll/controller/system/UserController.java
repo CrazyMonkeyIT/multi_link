@@ -1,12 +1,12 @@
-package com.valueservice.djs.controller.system;
+package com.valueservice.dll.controller.system;
 
-import com.valueservice.djs.bean.BaseResult;
+import com.valueservice.dll.bean.BaseResult;
 import com.github.pagehelper.PageInfo;
-import com.valueservice.djs.controller.BaseController;
-import com.valueservice.djs.db.entity.system.ResourcesDO;
-import com.valueservice.djs.db.entity.system.UserInfoDO;
-import com.valueservice.djs.service.system.ResourceService;
-import com.valueservice.djs.service.system.UserInfoService;
+import com.valueservice.dll.controller.BaseController;
+import com.valueservice.dll.db.entity.system.ResourcesDO;
+import com.valueservice.dll.db.entity.system.UserInfoDO;
+import com.valueservice.dll.service.system.ResourceService;
+import com.valueservice.dll.service.system.UserInfoService;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.valueservice.djs.util.DateUtil;
+import com.valueservice.dll.util.DateUtil;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashMap;

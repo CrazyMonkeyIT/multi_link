@@ -1,10 +1,10 @@
-package com.valueservice.djs.config;
+package com.valueservice.dll.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.valueservice.djs.shiro.ShiroAuthorizingRealm;
-import com.valueservice.djs.shiro.tags.ShiroTags;
+import com.valueservice.dll.shiro.ShiroAuthorizingRealm;
+import com.valueservice.dll.shiro.tags.ShiroTags;
 import freemarker.template.TemplateException;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
@@ -47,15 +47,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/index").setViewName("index");
     }
 
-    @Value("${file.path}")
-    private String filePath;
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**")
                 .addResourceLocations("classpath:/static/");
-        registry.addResourceHandler("/minifile/**").
-                addResourceLocations(String.format("file:%s",filePath));
+        registry.addResourceHandler("/minifile/**");
         super.addResourceHandlers(registry);
     }
 

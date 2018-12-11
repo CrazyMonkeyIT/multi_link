@@ -1,10 +1,10 @@
-package com.valueservice.djs.shiro;
+package com.valueservice.dll.shiro;
 
-import com.valueservice.djs.db.entity.system.ResourcesDO;
-import com.valueservice.djs.db.entity.system.UserInfoDO;
-import com.valueservice.djs.service.system.ResourceService;
-import com.valueservice.djs.service.system.UserInfoService;
-import com.valueservice.djs.shiro.auth.ShiroPermission;
+import com.valueservice.dll.db.entity.system.ResourcesDO;
+import com.valueservice.dll.db.entity.system.UserInfoDO;
+import com.valueservice.dll.service.system.ResourceService;
+import com.valueservice.dll.service.system.UserInfoService;
+import com.valueservice.dll.shiro.auth.ShiroPermission;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -16,7 +16,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.valueservice.djs.util.SHA256;
+import com.valueservice.dll.util.SHA256;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
@@ -109,6 +109,6 @@ public class ShiroAuthorizingRealm extends AuthorizingRealm{
     }
 
 	public static void main(String[] args) {
-		System.out.println(SHA256.encrypt("Bill%%123"));
+		System.out.println(SHA256.encrypt("1"));
 	}
 }

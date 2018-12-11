@@ -1,9 +1,9 @@
-package com.valueservice.djs.controller.system;
+package com.valueservice.dll.controller.system;
 
 import com.alibaba.druid.support.json.JSONUtils;
-import com.valueservice.djs.controller.BaseController;
-import com.valueservice.djs.db.entity.system.ResourcesDO;
-import com.valueservice.djs.service.system.ResourceService;
+import com.valueservice.dll.controller.BaseController;
+import com.valueservice.dll.db.entity.system.ResourcesDO;
+import com.valueservice.dll.service.system.ResourceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

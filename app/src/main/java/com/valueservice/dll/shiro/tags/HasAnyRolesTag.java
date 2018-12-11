@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.valueservice.djs.shiro.tags;
+package com.valueservice.dll.shiro.tags;
 
 import org.apache.shiro.subject.Subject;
 

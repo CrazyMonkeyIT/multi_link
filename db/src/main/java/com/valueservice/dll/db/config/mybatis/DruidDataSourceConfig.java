@@ -28,7 +28,7 @@ import java.util.Map;
  * @date 2017年7月31日 上午12:03:39
  */
 @Configuration
-@MapperScan("com.valueservice.djs.db.dao")
+@MapperScan("com.valueservice.dll.db.dao")
 public class DruidDataSourceConfig {
 
 	@Resource
